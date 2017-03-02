@@ -16,8 +16,18 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body><ul class="nav navbar-nav navbar-right">
+            <li>
+                <a title="Manage" href="/Manage">Hello Hallo123@test.be!</a>
+            </li>
+            <li>
+                <button type="submit" class="btn btn-link navbar-btn navbar-link">Log off</button>
+            </li>
+        </ul>
+    <div class="logo-img">
+        <img src="~/images/kairos_icon_white.png" alt="Kairos-white" class="logo-img" />
+    </div>
+   @* <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -37,7 +47,8 @@
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
-    </div>
+    </div>*@
+
     <div class="container body-content">
         @RenderBody()
         <hr />
