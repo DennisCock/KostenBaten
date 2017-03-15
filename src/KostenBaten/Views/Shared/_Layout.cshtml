@@ -16,27 +16,20 @@
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
 </head>
-<body><ul class="nav navbar-nav navbar-right">
-            <li>
-                <a title="Manage" href="/Manage">Hello Hallo123@test.be!</a>
-            </li>
-            <li>
-                <button type="submit" class="btn btn-link navbar-btn navbar-link">Log off</button>
-            </li>
-        </ul>
-    <div class="logo-img">
-        <img src="~/images/kairos_icon_white.png" alt="Kairos-white" class="logo-img" />
-    </div>
-   @* <div class="navbar navbar-inverse navbar-fixed-top">
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <div class="logo-img">
+                    <a asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/kairos_wordmark_white.png" alt="Kairos-wordmark" class="logo-img" /></a>
+                </div>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">KostenBaten</a>
+                @*<a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">KostenBaten</a>*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -47,10 +40,12 @@
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
-    </div>*@
+    </div>
 
     <div class="container body-content">
+        <div class="container-light">
         @RenderBody()
+        </div>
         <hr />
         <footer>
             <p>&copy; 2017 - KostenBaten</p>
